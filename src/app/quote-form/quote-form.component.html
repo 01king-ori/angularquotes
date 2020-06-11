@@ -1,15 +1,28 @@
 <div class="container-fluid">
-    <h2 id="Form">Quotes entry form</h2>
-    <hr>
-    <form>
-        <div class="form-group">
-            <div ng-app="">
-            <label for="name">Name of author</label><br>
-            <input type="text" id="name" ng-model="name" placeholder="Author"><br>
-            <label for
-
-        </div>
-        </div>
-
-    </form>
+    <div id="form">
+        <h2 id="Form">Quotes entry form</h2>
+        <hr>
+        <form>
+            <div class="form-group">
+                <div ng-app="">
+                    <label for="name">Name of author</label><br>
+                    <input type="text" id="name" class="form-control" ng-model="name" placeholder="Author"><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <div ng-app="">
+                    <label for="informant">Person who submitted the quote</label><br>
+                    <input type="text" id="informant" ng-model="informant" class="form-control"
+                        placeholder="The name of the person who submitted the quote"><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <div ng-app="">
+                    <label for="quote">Quote</label><br>
+                    <input type="text" id="quote" ng-model="quote" class="form-control" placeholder="The quote"><br>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
 </div>
