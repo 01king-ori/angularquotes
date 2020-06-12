@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { VoteComponent } from './vote/vote.component';
 import { QuotesComponent } from './quotes/quotes.component';
+import { QuoteDeleteComponent } from './quote-delete/quote-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteFormComponent,
     VoteComponent,
-    QuotesComponent
+    QuotesComponent,
+    QuoteDeleteComponent
   ],
   imports: [
     BrowserModule,
