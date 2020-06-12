@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Quotes } from '../quotes';
 
 @Component({
-  selector: 'app-quote-delete',
-  templateUrl: './quote-delete.component.html',
-  styleUrls: ['./quote-delete.component.css']
+  selector: 'app-quote-details',
+  templateUrl: './quote-details.component.html',
+  styleUrls: ['./quote-details.component.css']
 })
-export class QuoteDeleteComponent implements OnInit {
+export class QuoteDetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() quotes: Quote;
+  @Output() isComplete = new EventEmitter<boolean>();//transmits to the delete trigger from parent component on delete function
 
-  ngOnInit(): void {
+  quoteDelete(complete: boolean) {
+    this.isComplete.emit(complete);
+  }
+
+  ngOnInit() {
   }
 
 }

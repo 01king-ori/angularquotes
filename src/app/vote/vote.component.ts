@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 import {Quotes} from '../quotes'
 @Component({
   selector: 'app-vote',
