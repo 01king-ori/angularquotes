@@ -20,7 +20,7 @@ showDescription= false;//boolean setting to hide and display
 
   addNewQuote(quote) {
     let quoteLength = this.quotes.length;
-    quote.name = quoteLength + 1;
+    
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }

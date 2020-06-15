@@ -17,7 +17,19 @@ export class VoteComponent implements OnInit {
   downVote(){
     this.dvotes = this.dvotes + 1;
   }
-  
+  originalNum:number
+ lastNum:number
+ counter:number
+  highestUpvote(){
+    this.originalNum = 0
+    this.lastNum = 0
+ 
+    for(this.counter=0 ; this.counter < this.uvotes; this.counter++) {
+      this.lastNum = this.uvotes[this.counter].upvotes;
+      if(this.lastNum > this.originalNum){this.originalNum = this.lastNum}
+    }
+    return  this.originalNum
+  }
 constructor() { }
 
 ngOnInit() {
