@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes'
+import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-quote',
-  templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  selector: 'app-quotes',
+  templateUrl: './quotes.component.html',
+  styleUrls: ['./quotes.component.css']
 })
-export class QuoteComponent implements OnInit {
+export class QuotesComponent implements OnInit {
 
   quotes = [
-  new Quotes(1,'Marylin Monroe','I am selfish,impatient and a little insecure.I make mistakes,I am out of control and at times hard to handle.But if you cant handle me at my worst then you sure as hell dont deserve me at my best.','admin', new Date(2020,5,10)),
-  new Quotes( 2,'Oscar Wilde','Be yourself; everyone else is already taken','admin',new Date(2020,11,10)),
-  new Quotes(3,'Albert Einstein','Two things are infinite;the universe and human stupidity;and I am not sure about the universe','admin',new Date(2019,5,10))  
+  new Quotes('Marylin Monroe','I am selfish,impatient and a little insecure.I make mistakes,I am out of control and at times hard to handle.But if you cant handle me at my worst then you sure as hell dont deserve me at my best.','admin', new Date(2020,6,14,22,6,30,30)),
+  new Quotes( 'Oscar Wilde','Be yourself; everyone else is already taken','admin',new Date(2020,6,14,22,6,30,30)),
+  new Quotes('Albert Einstein','Two things are infinite;the universe and human stupidity;and I am not sure about the universe','admin',new Date(2020,6,14,22,6,30,30)), 
   
 ]
 

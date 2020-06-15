@@ -1,25 +1,17 @@
 <div class="container" id="thee">
-    <div class="jumbotron">
-      <p>Life Quotes!</p><br><br><br>
-      <h6>Sharing memorable quotes</h6><br><br><br>
-  
-    </div>
-    <div class="form">
-      <h3>Kindly fill in this form if you are interested in publishing your qoute in this webpage</h3>
-      <app-quote-form></app-quote-form>
-    </div>
-  
+      
+     <app-quote-form></app-quote-form>
   
     <div class="col-8" id="two">
       <div class="row" id="lol">
-        <h3>Memorable Quotes</h3>
+        <h3 id="Quotes">Memorable Quotes</h3>
       </div>
       <div class="quotes">
         <div class="row">
-          <div class="card" id="crd" *ngFor='let quote of quotes;let i = index'>
+          <div class="card" id="crd" *ngFor='let quotes of quotes;let i = index'>
             <!--allows one by one display of the quotes-->
             <div class="card-title">
-              <h5 font color="yellow" *ngIf="showDescription">{{quotes.author}}</h5>
+              <h5 font color="yellow" *ngIf="showDescription">{{quotes.name}}</h5>
             </div>
             <!--structural directive set to the boolean property show description -->
             <button type="button" (click)="toggleQuote()" class="btn btn-primary">{{showDescription? "Hide": "Show"}}
@@ -29,7 +21,7 @@
             <!-- toggles the value in the show description property and dynamically alter text on the button -->
             <!-- if true it shows the description -->
             <div class="card-body" id="ppp">
-              <p id="{{i}}" appHighlight>{{quotes.quotes}}</p>
+              <p id="{{i}}" appHighlight>{{quotes.quote}}</p>
             </div>
             <div class="card-footer" id="hut" *ngIf="showDescription">
               <!-- hides/shows votes, submitted by details-->
@@ -37,15 +29,16 @@
                 <div class="col-4">
                   <p>
                     <app-vote></app-vote>
+                    <app-quote-delete></app-quote-delete>
                   </p>
-                  <!-- to show votes from vote app component + deleteQuote form dq details-->
+                  <!-- to show votes from vote app component + deleteQuote form -->
                 </div>
                 <div class="col-6" id="small">
                   <p>Submitted by {{quotes.informant}}, {{quotes.completeDate|dateCount}} days ago</p>
                   <!--calls and displays date count pipe results-->
                 </div>
                 
-                    <app-quote-delete [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-delete>
+                    
                 
                 
               </div>

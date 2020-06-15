@@ -8,7 +8,7 @@ import { Quotes } from '../quotes';
 })
 export class QuoteDeleteComponent implements OnInit {
 
-  @Input() quotes: Quotes;
+  @Input() quote: Quotes;
   @Output() isComplete = new EventEmitter<boolean>();//transmits to the delete trigger from parent component on delete function
 
   quoteDelete(complete: boolean) {
