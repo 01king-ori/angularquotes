@@ -29,7 +29,7 @@
                 <div class="col-4">
                   <p>
                     <app-vote></app-vote>
-                    <app-quote-delete></app-quote-delete>
+                    <app-quote-delete [quote]='quotes' (isComplete)='deleteQuote($event,i)'></app-quote-delete>
                   </p>
                   <!-- to show votes from vote app component + deleteQuote form -->
                 </div>
